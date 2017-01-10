@@ -3,12 +3,10 @@
 #### Set up ####
 
 # Set your working directory
-setwd('~/Documents/info-370/r-intro/ed-cost/')
-
-# Install external libraries for use - only needs to be done once on your machine
-# install.packages(dplry) 
-# install.packages(plotly)
-# install.packages(stringr)
+setwd('/Users/Wei-Jen/info370-class-code/r-intro/ed-cost')
+install.packages('dplyr')
+install.packages('plotly')
+install.packages('stringr')
 
 # Load the libraries into R - needs to be done each time you want to use the library
 library(dplyr) 
@@ -47,7 +45,8 @@ most.expensive <- ed.data %>%
       select(Name.of.institution)
 
 # What was the least expensive school in 2014?
-
+least.expensive <- ed.data %>% filter(tuition.2014 == max(tuition.2014)) %>% 
+  
 
 #### What is the average annual tuition by sector in 2014? ####
 
